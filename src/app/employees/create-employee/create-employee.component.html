@@ -1,0 +1,68 @@
+<form #employeeForm="ngForm" (ngSubmit)="saveEmployee(employeeForm)">
+    <div class ="panel panel-primary" >
+            <div class="panel-heading">
+                <h3 class="panel-title">Create Employee</h3>
+            </div>
+            <div class="panel-body">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input id="fullName" name="fullName" [(ngModel)]="fullName" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                        <label for="email">Email</label>
+                        <input id="email" name="email" [(ngModel)]="email" type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                            <label for="phoneNumber">PhoneNumber</label>
+                            <input id="phoneNumber" name="phoneNumber" [(ngModel)]="phoneNumber" type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="technology">Technology</label>
+
+                            <input  list="tech-plan" id="technology" name="technology" [(ngModel)]="technology" type="text" class="form-control">
+                            <datalist id="tech-plan">
+                                <option value="JAVA"></option>
+                                <option value="DEVOPS"></option>
+                                <option value="BIGDATA"></option>
+                                
+                            </datalist>
+                        </div>
+                        <div class="form-group">
+                            <label for="startDate">StartDate</label>
+                            <input id="startDate" name="startDate" [(ngModel)]="startDate" type="date" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="endDate">EndDate</label>
+                            <input id="endDate" name="endDate" [(ngModel)]="endDate" type="date" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="clientName">ClientName</label>
+                            <input id="clientName" name="endDate" [(ngModel)]="clientName" type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="vendorName">VendorName</label>
+                            <input id="vendorName" name="vendorName" [(ngModel)]="vendorName" type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="vendorPhoneNumber">VendorPhoneNumber</label>
+                            <input id="vendorPhoneNumber" name="vendorPhoneNumber" [(ngModel)]="vendorPhoneNumber" type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="vendorEmail">VendorEmail</label>
+                            <input id="vendorEmail" name="vendorEmail" [(ngModel)]="vendorEmail" type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="rate">Rate</label>
+                            <input id="rate" name="rate" [(ngModel)]="rate" type="text" class="form-control">
+                        </div>
+    
+                        
+                    
+                </div>
+                <div class="panel-footer">
+                        <button type="submit" class="btn btn-primary">Save </button>
+                    </div>
+                </div>
+            </form>
+    
+           Angular Genrated Value:  {{employeeForm.value | json}}

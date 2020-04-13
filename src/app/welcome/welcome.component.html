@@ -1,0 +1,46 @@
+
+<div class="container">
+    Check the Employee Details
+    <button (click)="getWelcomeMessage()" class="btn btn-success">Employee Details</button>
+</div>
+
+
+<div class="container" >
+    <table border="1">
+        <thead></thead>
+        <tr>
+          <th>Eid</th>
+          <th>FirstName</th>
+          <th>LastName</th>
+          <th>Email</th>
+          <th>PhoneNumber</th>
+          <th>Technology</th>
+          <th>StartDate</th>
+          <th>EndDate</th>
+          <th>ClientName</th>
+          <th>ClientAddress</th>
+          <th>VendorName</th>
+          <th>VendorPhone</th>
+          <th>Rate</th>
+          </tr>
+        
+        <tbody>
+            <tr *ngFor="let employee of employees">
+                <td>{{employee.eid}}</td>
+                <td>{{employee.lastName}}</td>
+                <td>{{employee.firstName}}</td>
+                <td>{{employee.email}}</td>
+                <td>{{employee.phoneNumber}}</td>
+                <td>{{employee.technology}}</td>
+                <td>{{(employee.startDate) | date}}</td>
+                <td>{{(employee.endDate) | date}}</td>
+                <td>{{employee.clientName}}</td>
+                <td>{{employee.clientAddress}}</td>
+                <td>{{employee.vendorName}}</td>
+                <td>{{employee.vendorphone}}</td>
+                <td>{{employee.rate}}</td>
+                </tr>
+        </tbody>
+          </table>
+          
+</div>
